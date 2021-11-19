@@ -2,7 +2,7 @@ import {Entity,PrimaryColumn,Column,CreateDateColumn,UpdateDateColumn} from "typ
 import {v4 as uuid} from "uuid"
 
 @Entity("Users")
-export class User {
+class User {
 
 @PrimaryColumn()
 readonly id:string
@@ -27,5 +27,7 @@ constructor() {
         this.id = uuid()
     }
 }
-vsdvsdvsdvsvsv
+
 }
+
+export {User}
