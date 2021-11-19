@@ -4,7 +4,8 @@
     "migrations":["src/database/migrations/*.ts"],
     "cli":{
         "migrationsDir":"src/database/migrations",
-        "typeorm":"ts-node-dev ./node_modules/typeorm/cli.js"
+        "typeorm":"ts-node-dev ./node_modules/typeorm/cli.js",
+        "entitiesDir":"src/entities"
 
     }
 }
