@@ -14,8 +14,21 @@ export class CreateUsers1637322321910 implements MigrationInterface {
                             isPrimary:true
                         },
                         {
-                            
-                        }
+                           name:"name",
+                           type:"varchar" 
+                        },
+                        {
+                            name:"admin",
+                            type:"boolean",
+                            default:false
+                        },
+                        {
+                            name: "created_at",
+                            type:"timestamp",
+                            default:"now()"
+
+                        },
+
                     ]
                 }
             )
@@ -23,6 +36,7 @@ export class CreateUsers1637322321910 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
+        await queryRunner.dropTable("Users")
     }
 
 }
