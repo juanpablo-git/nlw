@@ -2,9 +2,12 @@ import express,{Request,Response,NextFunction} from 'express'
 import "express-async-errors"
 import "reflect-metadata";
 import "./database";
-import { router } from './rounts/router';
+const app = express()
 
 
+
+
+<<<<<<< HEAD
 const app = express()
 app.use(express.json())
 app.use(router)
@@ -20,5 +23,7 @@ app.use((err:Error,request:Request,response:Response,next:NextFunction)=>{
         message:"Internal Error"
     })
 })
+=======
+>>>>>>> parent of 1c33e8a... post fieto com sucesso
 
 app.listen(3000,()=>console.log("Server runing"))
