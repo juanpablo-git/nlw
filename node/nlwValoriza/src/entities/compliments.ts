@@ -14,10 +14,10 @@ user_sender:string
 userSender:User
 
 @Column()
-user_reciver:string
-@JoinColumn({name:"user_reciver"})
+user_reserver:string
+@JoinColumn({name:"user_reserver"})
 @ManyToOne(()=>User)
-userReciver: User
+userRecerver: User
 
 @Column()
 tag_id:string
@@ -26,7 +26,10 @@ tag_id:string
 tag:Tag
 
 @Column()
-message:string
+mensage:string
+
+
+
 @CreateDateColumn()
 created_at:Date
 

@@ -1,0 +1,20 @@
+import {Request,Response} from "express"
+import { CreateComplimentsService } from "../services/createComplimentsServices"
+class CreateCoplimentController {
+async   handle(request:Request,response:Response){
+    const  { tag_id,
+        user_reserver,
+        user_sender,
+        mensage} = request.body
+    const createCompluimentService = new CreateComplimentsService()
+
+   const compliment = await createCompluimentService.execulte({
+        tag_id,
+        user_reserver,
+        user_sender,
+        mensage
+    })
+    return response.json(compliment)
+}
+}
+export {CreateCoplimentController}
